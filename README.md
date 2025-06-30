@@ -1,4 +1,4 @@
-# 漆英个人网站
+# 个人网站
 
 一个现代化的个人作品集网站，展示产品经理漆英的专业能力和项目经验。
 
@@ -73,13 +73,6 @@
    python3 -m http.server 8000
    ```
 
-2. **访问网站**:
-   - 首页: http://localhost:8000
-   - 作品集: http://localhost:8000/portfolio.html
-   - 项目详情: http://localhost:8000/project-detail.html?id=project1
-   - 联系页面: http://localhost:8000/contact.html
-
-## 项目详情页面功能
 
 ### 动态内容加载
 - 通过URL参数 `?id=project1` 加载不同项目信息
@@ -119,4 +112,4 @@
 
 ## 许可证
 
-© 2024 漆英. 保留所有权利。 
+© 2025 漆英. 保留所有权利。 
