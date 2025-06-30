@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品集 - 漆英</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #e0e7ff 0%, #f0f7fa 100%);
+      min-height: 100vh;
+    }
+    .frosted {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+      border-radius: 2.5rem;
+    }
+    .soft-shadow {
+      box-shadow: 0 4px 24px 0 rgba(80, 120, 255, 0.10);
+    }
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spin-slow 8s linear infinite;
+    }
+    
+    /* 动画效果 */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-slide-in-up {
+      animation: slideInUp 0.6s ease-out;
+    }
+    
+    /* 卡片悬停效果 */
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* 按钮点击效果 */
+    .btn-click:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body class="text-gray-900">
+  <!-- 导航栏 -->
+  <nav class="frosted soft-shadow mt-6 mx-auto max-w-5xl px-8 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center space-x-2">
+      <i class="fas fa-user-circle text-2xl text-blue-500"></i>
+      <span class="font-bold text-xl tracking-wide">漆英</span>
+    </a>
+    <ul class="flex space-x-8 text-lg font-medium">
+      <li><a href="index.html" class="hover:text-blue-600 transition">首页</a></li>
+      <li><a href="portfolio.html" class="text-blue-600 font-semibold">作品集</a></li>
+      <li><a href="contact.html" class="hover:text-blue-600 transition">联系我</a></li>
+    </ul>
+  </nav>
+
+  <!-- 主体内容 -->
+  <main class="max-w-5xl mx-auto px-6 py-16">
+    <!-- 页面标题 -->
+    <section class="frosted soft-shadow p-12 mb-12 relative overflow-hidden animate-slide-in-up">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-10 animate-pulse"></div>
+        <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-gradient-to-br from-green-400 to-blue-500 rounded-full opacity-10 animate-bounce"></div>
+      </div>
+      
+      <div class="relative z-10 text-center">
+        <h1 class="text-5xl font-extrabold mb-4 tracking-tight bg-gradient-to-r from-blue-900 via-purple-800 to-pink-700 bg-clip-text text-transparent">
+          我的作品集
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">探索我的项目作品，展现产品设计与用户体验的专业能力</p>
+        <div class="flex justify-center space-x-4">
+          <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">
+            <i class="fas fa-filter mr-1"></i>产品设计
+          </span>
+          <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">
+            <i class="fas fa-mobile-alt mr-1"></i>移动应用
+          </span>
+          <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold">
+            <i class="fas fa-desktop mr-1"></i>Web平台
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section class="frosted soft-shadow p-10 mb-12 relative overflow-hidden">
+      <div class="absolute top-6 left-8 animate-pulse" width="36" height="36" fill="none" viewBox="0 0 36 36">
+        <ellipse cx="18" cy="18" rx="16" ry="10" fill="#fbcfe8" fill-opacity="0.4"/>
+      </div>
+      <div class="absolute bottom-4 right-8 animate-spin-slow" width="28" height="28" fill="none" viewBox="0 0 28 28">
+        <circle cx="14" cy="14" r="12" fill="#a7f3d0" fill-opacity="0.3"/>
+      </div>
+      
+      <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
+        <i class="fas fa-project-diagram text-purple-400 mr-2"></i>精选项目
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- 项目1 -->
+        <div class="bg-white bg-opacity-70 rounded-xl shadow-lg p-6 card-hover">
+          <div class="relative mb-4">
+            <img src="images/project1.jpg" alt="中望职业技能认证平台" class="w-full h-48 object-cover rounded-lg">
+            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              认证平台
+            </div>
+          </div>
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-xl font-bold text-blue-900">中望职业技能认证平台</h3>
+            <span class="text-sm text-black font-medium">
+              <i class="fas fa-building mr-1"></i>中望龙腾
+            </span>
+          </div>
+          <p class="text-gray-700 mb-4">打造标准化、智能化的能力认证平台，科学评估用户CAD/3D/CAE能力，建立认证-培训-就业商业闭环。</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">产品规划</span>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">用户体验</span>
+            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">数据分析</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-500">2022 - 2024</span>
+            <a href="project-detail.html?id=project1" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition btn-click">
+              查看详情
+            </a>
+          </div>
+        </div>
+
+        <!-- 项目2 -->
+        <div class="bg-white bg-opacity-70 rounded-xl shadow-lg p-6 card-hover">
+          <div class="relative mb-4">
+            <img src="images/project2.jpg" alt="中教云智慧教学平台" class="w-full h-48 object-cover rounded-lg">
+            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              B端教育
+            </div>
+          </div>
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-xl font-bold text-blue-900">中教云智慧教学平台</h3>
+            <span class="text-sm text-black font-medium">
+              <i class="fas fa-building mr-1"></i>中教云智
+            </span>
+          </div>
+          <p class="text-gray-700 mb-4">建设AI赋能型教学平台，融合全学段/学科/多版本数字教材与资源，助力"停课不停学"与教育信息化升级。</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">平台设计</span>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">AI赋能</span>
+            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">资源管理</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-500">2020 - 2022</span>
+            <a href="project-detail.html?id=project2" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition btn-click">
+              查看详情
+            </a>
+          </div>
+        </div>
+
+        <!-- 项目3 -->
+        <div class="bg-white bg-opacity-70 rounded-xl shadow-lg p-6 card-hover">
+          <div class="relative mb-4">
+            <img src="images/project3.jpg" alt="数字教材制作工具" class="w-full h-48 object-cover rounded-lg">
+            <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              工具设计
+            </div>
+          </div>
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-xl font-bold text-blue-900">数字教材制作工具</h3>
+            <span class="text-sm text-black font-medium">
+              <i class="fas fa-building mr-1"></i>中教云智
+            </span>
+          </div>
+          <p class="text-gray-700 mb-4">开发数字教材制作工具，实现制作→审核→发布→授权闭环，支撑个性化学习分析。</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">工具设计</span>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">可视化编辑</span>
+            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">效率提升</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-500">2021 - 2022</span>
+            <a href="project-detail.html?id=project3" class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition btn-click">
+              查看详情
+            </a>
+          </div>
+        </div>
+
+        <!-- 项目4 -->
+        <div class="bg-white bg-opacity-70 rounded-xl shadow-lg p-6 card-hover">
+          <div class="relative mb-4">
+            <img src="images/project4.jpg" alt="智慧园区解决方案" class="w-full h-48 object-cover rounded-lg">
+            <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              解决方案
+            </div>
+          </div>
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-xl font-bold text-blue-900">智慧园区解决方案</h3>
+            <span class="text-sm text-black font-medium">
+              <i class="fas fa-building mr-1"></i>云创天下
+            </span>
+          </div>
+          <p class="text-gray-700 mb-4">打造SaaS化智慧园区系统，融合物联网/大数据/AI，服务管理方、企业与员工，支撑智能楼宇运营。</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">SaaS平台</span>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">物联网</span>
+            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">大数据</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-500">2017 - 2020</span>
+            <a href="project-detail.html?id=project4" class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition btn-click">
+              查看详情
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能展示 -->
+    <section class="frosted soft-shadow p-10 mb-12 relative overflow-hidden">
+      <div class="absolute top-4 right-8 animate-bounce" width="32" height="32" fill="none" viewBox="0 0 32 32">
+        <rect x="8" y="8" width="16" height="16" rx="8" fill="#fef08a" fill-opacity="0.4"/>
+      </div>
+      <div class="absolute bottom-4 left-8 animate-spin-slow" width="40" height="40" fill="none" viewBox="0 0 40 40">
+        <circle cx="20" cy="20" r="18" fill="#bae6fd" fill-opacity="0.3"/>
+      </div>
+      
+      <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
+        <i class="fas fa-tools text-green-400 mr-2"></i>专业技能
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white bg-opacity-70 rounded-xl p-6 text-center card-hover">
+          <i class="fas fa-palette text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2 text-blue-900">产品设计</h3>
+          <p class="text-gray-600">Axure、Figma等设计工具，具备完整的产品设计流程经验</p>
+        </div>
+        
+        <div class="bg-white bg-opacity-70 rounded-xl p-6 text-center card-hover">
+          <i class="fas fa-chart-line text-4xl text-green-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2 text-blue-900">数据分析</h3>
+          <p class="text-gray-600">用户行为分析、产品数据分析、数据可视化等数据分析能力</p>
+        </div>
+        
+        <div class="bg-white bg-opacity-70 rounded-xl p-6 text-center card-hover">
+          <i class="fas fa-users text-4xl text-purple-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2 text-blue-900">团队协作</h3>
+          <p class="text-gray-600">跨部门沟通、项目管理、敏捷开发等团队协作经验</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="frosted soft-shadow max-w-5xl mx-auto mb-8 py-6">
+    <div class="text-center text-gray-500 text-sm">
+      &copy; 2024 漆英. 保留所有权利。
+    </div>
+  </footer>
+</body>
+</html> 
