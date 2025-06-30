@@ -1,4 +1,4 @@
-# 漆英个人网站
+# 个人网站
 
 一个现代化的个人作品集网站，展示产品经理漆英的专业能力和项目经验。
 
@@ -66,30 +66,11 @@
 └── assets/                 # 其他资源
 ```
 
-## 使用方法
-
-1. **启动本地服务器**:
-   ```bash
-   python3 -m http.server 8000
-   ```
-
-2. **访问网站**:
-   - 首页: http://localhost:8000
-   - 作品集: http://localhost:8000/portfolio.html
-   - 项目详情: http://localhost:8000/project-detail.html?id=project1
-   - 联系页面: http://localhost:8000/contact.html
-
-## 项目详情页面功能
 
 ### 动态内容加载
 - 通过URL参数 `?id=project1` 加载不同项目信息
 - 支持的项目ID: project1, project2, project3, project4
 
-### 视频展示功能
-- 支持MP4和WebM格式视频
-- 视频播放控制按钮
-- 自动错误处理和占位符显示
-- 响应式视频播放器
 
 ### 交互功能
 - 卡片悬停效果
@@ -119,4 +100,4 @@
 
 ## 许可证
 
-© 2024 漆英. 保留所有权利。 
+© 2025 漆英. 保留所有权利。 
