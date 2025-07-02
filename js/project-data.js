@@ -11,6 +11,7 @@ const projectData = {
       tag2: { label: '自动化率', value: '90%+', color: 'green' },
       tag3: { label: '已上线证书', value: '7个', color: 'purple' }
     },
+    prototype: 'https://app.mockplus.cn/s/Vxk_Le6In?',
     background: {
       industryPain: {
         title: '行业痛点',
@@ -134,6 +135,7 @@ const projectData = {
       tag2: { label: '接入学校', value: '1万+', color: 'green' },
       tag3: { label: '数字资源', value: '160万+', color: 'purple' },
     },
+    prototype: 'https://app.mockplus.cn/s/67U8QNPja?',
     background: {
       industryPain: {
         title: '行业痛点',
@@ -255,6 +257,7 @@ const projectData = {
       tag2: { label: '效率提升', value: '4倍', color: 'green' },
       tag3: { label: '制作质量', value: '95%', color: 'purple' },
     },
+    prototype: 'https://app.mockplus.cn/s/prt7EaOIo?',
     background: {
       industryPain: {
         title: '行业痛点',
@@ -377,6 +380,7 @@ const projectData = {
       tag2: { label: '硬件设备', value: '20+', color: 'green' },
       tag3: { label: '子系统', value: '30+', color: 'purple' },
     },
+    prototype: 'https://app.mockplus.cn/s/ULw44yHQx?',
     background: {
       industryPain: {
         title: '行业痛点',
